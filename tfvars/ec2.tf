@@ -7,9 +7,9 @@ resource "aws_instance" "expense" {
   tags = merge(
     var.common_tags,
     {
-      Name        = "${each.key}.${var.Environment}"
-      Environment = "${each.key}.${var.Environment}"
-      Module      = "${each.key}.${var.Environment}"
+      Name        = "${each.key}"
+      Environment = "${each.key}"
+      Module      = "${each.key}"
     }
   )
 }
