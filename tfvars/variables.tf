@@ -1,10 +1,6 @@
 variable "instance_names" {
   type = map(string)
-  default = {
-    db-dev       = "t2.micro"
-    frontend-dev = "t3.micro"
-    backend-dev  = "t3.micro"
-  }
+  #default values given in prod.tfvars and dev.tfvars
 }
 
 variable "common_tags" {
@@ -26,6 +22,6 @@ variable "zone_id" {
 }
 
 variable "Environment" {
-  type    = string
-  default = "dev"
+  type = string
+  #default values given in prod.tfvars and dev.tfvars
 }
